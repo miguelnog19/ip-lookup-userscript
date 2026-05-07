@@ -1,6 +1,6 @@
-# IP Lookup — Tampermonkey Script
+# IP Lookup — Userscript
 
-A Tampermonkey userscript that lets you instantly look up any IP address on any webpage using [ipinfo.io](https://ipinfo.io/).
+A userscript that lets you instantly look up any IP address on any webpage using [ipinfo.io](https://ipinfo.io/). Works with any userscript manager — Tampermonkey, Violentmonkey, or Greasemonkey.
 
 ## Features
 
@@ -8,13 +8,16 @@ A Tampermonkey userscript that lets you instantly look up any IP address on any 
 - **Click the bubble** to trigger a live lookup (no right-click needed, zero interference with buttons or links)
 - **Draggable result panel** — shows geolocation, ASN/org, timezone, hostname, and a Google Maps link for the coordinates
 - **Bogon/private IP detection** — private and reserved addresses are flagged with a warning
-- **Token support** — configure your ipinfo.io API token via the Tampermonkey extension menu (stored securely in GM storage)
+- **Token support** — configure your ipinfo.io API token via the userscript manager menu (stored securely in GM storage)
 - **Works everywhere** — matches `*://*/*`; tested on OPNsense
 
 ## Installation
 
-1. Install the [Tampermonkey](https://www.tampermonkey.net/) browser extension
-2. Open [`ip-lookup.user.js`](ip-lookup.user.js) and click **Install** when prompted by Tampermonkey
+1. Install a userscript manager:
+   - [Tampermonkey](https://www.tampermonkey.net/) (Chrome, Firefox, Edge, Safari)
+   - [Violentmonkey](https://violentmonkey.github.io/) (Chrome, Firefox, Edge)
+   - [Greasemonkey](https://addons.mozilla.org/firefox/addon/greasemonkey/) (Firefox)
+2. Open [`ip-lookup.user.js`](ip-lookup.user.js) and click **Install** when prompted
 
 ## Usage
 
@@ -28,9 +31,9 @@ A Tampermonkey userscript that lets you instantly look up any IP address on any 
 
 ## Token Configuration
 
-The free anonymous tier of ipinfo.io allows **50,000 requests/month**. If you need more, set your token via the Tampermonkey extension menu:
+The free anonymous tier of ipinfo.io allows **50,000 requests/month**. If you need more, set your token via the userscript manager menu:
 
-- **⚙ Set ipinfo.io Token** — enter your token (stored in Tampermonkey GM storage, never sent anywhere else)
+- **⚙ Set ipinfo.io Token** — enter your token (stored in GM storage by your userscript manager, never sent anywhere else)
 - **✕ Clear ipinfo.io Token** — revert to anonymous access
 
 ## Fields Displayed
@@ -48,7 +51,7 @@ The free anonymous tier of ipinfo.io allows **50,000 requests/month**. If you ne
 
 ## Requirements
 
-- [Tampermonkey](https://www.tampermonkey.net/) v4.0+
+- A userscript manager: [Tampermonkey](https://www.tampermonkey.net/), [Violentmonkey](https://violentmonkey.github.io/), or [Greasemonkey](https://addons.mozilla.org/firefox/addon/greasemonkey/)
 - Any modern browser (Chrome, Firefox, Edge, Safari)
 
 ## License
